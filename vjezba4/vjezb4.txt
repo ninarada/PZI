@@ -1,0 +1,51 @@
+1. Name truthy and falsy values in JavaScript.
+Truthy values - value koja se smatra točnom u Boolean kontekstu (sve su truthy osim ako se nedefiniraju kao falsy)
+Falsy - undefined, null, NaN, 0, "" (empty string), and false
+
+
+2. What is the difference between == and === operators?
+== je operator usporedbe, koji pretvara operande istog tipa prije usporedbe,a === usporeduje vrijednosti i tipove operanada.
+
+
+3. Why does '' == false equal to true but '' === false is equal to false?
+- '' == false je istinit jer je prazan string uvijek falsy
+- '' === false je laĹľan jer nisu isti tipovi
+
+
+4. What is JavaScript scope, what are the different types of JavaScript scope?
+scope je kontekst unutar kojeg su varijable i funkcije dostupne 
+
+
+5. Describe each scope type and provide an example.
+globalni je na razini cijelog programa
+lokalni je unutar funkcije
+blok koda odnosi se na sve kodove između kovrčavih vitičastih zagrada {}
+leksički opseg je područje definicije izraza (leksički opseg stavke je mjesto na kojem je stavka stvorena)
+
+
+6. What is the difference between let and const keywords?
+const - ne može se više mijenjati
+let - vrijednost se može mijenjati
+
+7. Give an example of use of map, filter, find JavaScript array methods used on:
+const fruits = [ 'apple', 'banana', 'orange', 'kiwi', 'strawberry' ];
+a) const a = fruits.map(x => x+1); 
+["kiwi1", "apple1", "banana1"]
+
+b) const b = fruits.filter(word => word.length > 5); 
+["banana", "orange", "strawberry"]
+
+c) const c = fruits.find(element => element.length > 5);
+ "banana"
+
+
+
+8. What is the difference between split, slice and splice JavaScript array methods.
+split() se koristi za niz stringova
+slice() se koristi i za nizove i za stringove
+splice() se koristi samo za nizove
+
+
+9. What is hoisting?
+Hoisting je mehanizam u JavaScriptu kojim se deklaracija varijabli i funkcija stavlja na vrh dosega prije izvršavanja
+samog koda deklaracije.

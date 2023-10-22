@@ -1,0 +1,153 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    --primary-color: #2d5c88;
+    --light-primary-color: #96aec4;
+
+    --secondary-color: #4e4e4e;
+    --light-secondary-color: #d3d3d3;
+}
+
+header {
+    background-color: var(--primary-color);
+
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0.5em;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#search-container {
+    background-color: white;
+    border-radius: 8px;
+    color: var(--secondary-color);
+
+}
+
+#search-box {
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+.search-icon {
+    padding: 0.5em;
+    border-right: 1px solid var(--light-secondary-color);
+}
+
+main {
+    max-width: 800px;
+    margin: 5rem auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.links-container a {
+    background-color: var(--light-primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+    margin-right: 1em;
+
+}
+
+.links-container a:last-child {
+    margin-right: 0;
+}
+
+.links-container .selected {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+#thumbnails-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.thumbnail {
+    border-bottom: 3px solid transparent;
+}
+
+.thumbnail.selected {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.thumbnail:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+#cards-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+}
+
+.card {
+    background-color: var(--light-secondary-color) ;
+    position: relative;
+    padding: 8px;
+}
+
+.fa.fa-times.delete-button {
+    color: var(--secondary-color);
+    position: absolute ;
+    top: -8px;
+    right: -6px;
+
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #cards-container .card {
+        max-width: 275px;
+
+    }
+    #cards-container {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    
+}
+
+
+@media screen and (min-width: 1001px) {
+    #cards-container .card {
+        max-width: 305px;
+        font-size: 130%;
+    }
+    #cards-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    
+}
+
+
+
+
+

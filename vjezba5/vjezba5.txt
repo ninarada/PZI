@@ -1,0 +1,99 @@
+1. What is the difference between prompt and alert box in JavaScript, show an example of their use.
+
+alert - prikazuje poruku 
+	- alert('Zdravo!')
+prompt - prikuplja tekstualni unos
+	 - const ime = prompt('Unesite svoje ime')
+	   console.log('Zdravo ' + ime)
+-------------------------------------------------------------------------------------------------
+2. Code below defines an object, what would console.log(person.name, person['age'], person.car, person.car.year, person.lastname) log to console?
+
+const person = {
+ name: 'miljenko',
+ age: 42,
+ car: { year: 2023, make: 'Toyota', model: 'Corolla' },
+};
+
+miljenko 42 { year: 2023, make: 'Toyota', model: 'Corolla' } 2023 undefined
+-------------------------------------------------------------------------------------------------
+3. What will the code below output to the console and why?
+
+var arr1 = "marija".split('');
+var arr2 = arr1.reverse();
+var arr3 = "dedic".split('');
+arr2.push(arr3);
+console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+
+array 1: length=7 last=d,e,d,i,c   
+array 2: length=7 last=d,e,d,i,c
+
+slice() vraca kopiju niza (-1 - pocinje od kraja)
+split() - originalni string dijeli u niz stringova
+-------------------------------------------------------------------------------------------------
+4. What will the code below output to the console and why?
+
+console.log("0 || 1 = "+(0 || 1));
+console.log("1 || 2 = "+(1 || 2));
+console.log("0 && 1 = "+(0 && 1));
+console.log("1 && 2 = "+(1 && 2));
+console.log("1 && 'text' = "+ (1 && 'text')) 
+
+0 || 1 = 1	//0 truthy
+1 || 2 = 1	//istina
+0 && 1 = 0	//laž
+1 && 2 = 2	//posljednji operator
+1 && 'text' = text	//prednost string
+-------------------------------------------------------------------------------------------------
+5. What is a ternary operator? Show an example of use.
+
+Jedini operator operator koji koristi 3 operanda, prvi je logički izraz koji procjenjuje na true ili false, drugi je rezultat kada logički izraz procjenjuje na true, a treći je rezultat kada booleov izraz procjenjuje na false.
+
+const age = 26;
+const beverage = age >= 21 ? "Beer" : "Juice";
+console.log(beverage); // "Beer"
+-------------------------------------------------------------------------------------------------
+6. What is optional chaining? If we have an object let a = { }, why does console.log(a.person.name) give an error but 7. console.log(a.person?.name) does not?
+
+Optional chaining pristupa objektovom vlasništvu ili poziva funkciju. 
+
+Zato jer je prva varijabla prazna.
+-------------------------------------------------------------------------------------------------
+7. What are undeclared and undefined variables, what's the difference?
+
+undeclared - pristup varijabli koja nije prethodno inicijalizirana koristeći var ili const
+undefined - varijabla je već deklarirana, ali joj nije dana vrijednost
+
+-------------------------------------------------------------------------------------------------
+8. What is the keyword this in JS?
+
+Ookazuje na objekt, a koji objekt ovisi o tome kako se poziva.
+-------------------------------------------------------------------------------------------------
+9. What are named and anonymus functions in JS? Can you store a function in a variable and then call it? Show examples for both questions.
+
+named function - ima ime
+anonymus function - nema ime, deklarirana bez identifikatora
+- moze
+
+<script>
+   function test() {
+       console.log (`This is a named function!`);
+   };
+</script>
+
+<script>
+   var test = function () {
+      console.log("This is an anonymous function!");
+   };
+   test();
+</script>
+-------------------------------------------------------------------------------------------------
+10. What are arrow functions and how are they different from normal functions? Show example.
+To su skraćeni način pisanja funkcija, prema ECMAScript 6 standardu. Još ih nazivaju i "fat arrow" funkcijama, zbog načina navođenja pomoću znaka =>  i one su uvijek anonimne.
+
+var imena = ["Borko", "Miloš", "Ana", "Dušan", "Anđelka"];
+
+  var svi = imena.reduce( (rez,a) => rez + " " + a );
+
+  console.log(svi);  // " Borko Miloš Ana Dušan Anđelka"
+};

@@ -1,0 +1,15 @@
+﻿body 
+{
+font-family:"Open-sans", sans-serif;font-size:14pt;COLOR:#677d94; bgColor:#f1f4f5}                
+}
+div
+{
+padding: 20px;
+margin: 20px auto;
+}
+table, td, tr
+{
+border: 1px solid gray;
+}
+
+
